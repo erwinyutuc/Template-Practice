@@ -21,6 +21,24 @@ html {
     padding: 0 40px;
 }
 
+.signup {
+    background-color: #7342d6;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 2rem;
+    font-size: 16px;
+}
+
+.learnmore {
+    background-color: #7342d6;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: none;
+    max-width: 165px;
+}
+
 p {
     display: flex;
     margin-block-start: 1em;
@@ -35,7 +53,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
+    margin: 2.5rem 0;
 
 }
 
@@ -84,19 +102,17 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 96px 0 96px 0;
-    background-color: pink;
 }
 
 .section__landing {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    height: calc(100vh - 90px);
+    height: calc(84vh - 100px);
 }
 
 .landing__description {
-    width: 40%;
+    width: 45%;
 }
 
 .landing__title {
@@ -112,23 +128,33 @@ li {
     padding-bottom: 40px;
 }
 
+.email {
+    border-radius: 8px;
+    border-color: solid #555; 
+    padding: 1rem 5rem
+}
+
 .landing__trust {
     padding-bottom: 48px;
 }
 
 .landing__img {
-    width: 60%;
+    width: 55%;
 }
 
 .firstimg {
-    height: 350px;
+    height: 400px;
 }
 
 /* FEATURES */
 
 .feature__container {
     padding: 80px 0;
-    height: calc(100vh - 90px);
+    height: calc(84vh - 100px);
+}
+
+.features {
+    padding-bottom: 1rem;
 }
 
 .feature__description {
@@ -136,10 +162,7 @@ li {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.features {
-    padding-bottom: 16px;
+    text-align: center;
 }
 
 .features__header {
@@ -148,12 +171,13 @@ li {
 
 .feature__para {
     width: 50%;
+    padding: 1.5rem 0 3rem 0;
+    margin: 0;
 }
 
 .services {
     display: flex;
     flex-wrap: wrap;
-    padding: 56px 0;
 }
 
 .service {
@@ -168,13 +192,14 @@ li {
 }
 
 .service__img {
-    border: 2px solid grey;
+    border: 2px solid #555;
     height: 24px;
     width: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px;
+    padding: 1.5rem;
+    border-radius: 2rem;
 }
 
 /* QUALITY WORK */ 
@@ -183,7 +208,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 90px);
+    height: calc(84vh - 100px);
 
 }
 
@@ -195,7 +220,7 @@ li {
 
 .step__container {
     display: flex;
-    height: calc(100vh - 90px);
+    height: calc(84vh - 100px);
 }
 
 .step__title {
@@ -220,9 +245,17 @@ li {
 
 /* VALUE */
 
+#values {
+    height: calc(84vh - 100px);
+}
+
+.v--container {
+    display: flex;
+    padding: 1rem 0 2rem 0;
+}
+
 .value__container {
     display: flex;
-    height: calc(100vh - 90px);
 }
 
 .values__title {
@@ -232,7 +265,6 @@ li {
 .values__header {
     font-size: 60px;
 }
-
 
 .val__can {
     width: 50%;
@@ -253,28 +285,70 @@ li {
 
 .price__title {
     font-size: 16px;
-    margin-bottom: 24px;
+    padding: 1rem;
 }
 
 .price__header {
     font-size: 40px;
-    margin-bottom: 24px;
 }
 
 .pricing__para {
-    margin: 0 230px 32px 230px;
+    text-align: center;
+    width: 45%;
+    padding: 1rem;
 }
 
 .plans {
     display: flex;
+    text-align: center;
 }
 
 .plan {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 35%;
-    margin: 24px;
+    width: 100%;
+    border: solid grey 1px;
+    border-radius: 8px;
+}
+
+.middle__plan {
+    margin: 0 1rem;
+    background-image: linear-gradient(to bottom right, navy, blue);
+    color: white;
+}
+
+.plan__top {
+    border-bottom: solid grey 1px;
+    padding:  1rem 5rem;
+}
+
+.plan__title {
+    padding: 1rem;
+}
+
+.plan__price {
+    font-size: 48px;
+}
+
+.plan__monthly {
+    padding: .5rem;
+}
+
+.plan__middle {
+    padding: 0 0 1rem 0;
+}
+
+.plan__type {     
+    padding: 2rem 0 1rem 0;                             
+}
+
+.plans__type {
+}
+
+.plan__bottom {
+    border-top: solid grey 1px;
+    padding: 1rem 5rem;
 }
 
 .plan__details {
@@ -285,14 +359,38 @@ li {
     margin: 16px;
 }
 
+.buyleft,
+.buymid,
+.buyright {
+    color: white;
+    padding: 1rem 4rem;
+    border-radius: 3rem;
+    border: none;
+}
+
+.buyleft {
+    background-image: linear-gradient(to bottom right, teal, white);
+}
+
+.buymid {
+    background: white;
+    color: navy;
+}
+
+.buyright {
+    background-image: linear-gradient(to bottom right, #7342d6, white);
+}
+
+
 /* TEST TIMONIALS */
 
 #testimonials {
-    height: calc(100vh - 90px);
+    height: calc(84vh - 100px);
 }
 
 .test__container {
     display: flex;
+    justify-content: space-evenly;
 }
 
 .img__wrapper {
@@ -301,4 +399,104 @@ li {
 
 .testimonal {
     width: 50%;
+}
+
+.testimonal__title {
+    font-size: 1rem;
+}
+
+.testimonal__subtitle {
+    padding: 1rem 0;
+}
+
+.user__rating {
+    padding: 1rem 0;
+}
+
+.user__names {
+    padding: 1rem;
+}
+
+/* FAQS  */ 
+
+#faqs {
+    height: calc(110vh - 100px);
+}
+
+.faq__title {
+    display: flex;
+    justify-content: center;
+}
+
+.faq__subtitle {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.faq__description {
+    display: flex;
+    justify-content: center;
+
+}
+
+.faq__questions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* contact */ 
+
+.contact__container {
+    display: flex;
+    margin: 56px 0;
+    padding: 100px;
+    background-color: navy;
+    border-radius: 8px;
+}
+
+.contact__title {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    width: 50%;
+}
+
+.contact__buttons {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer */ 
+
+#footer {
+
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    margin: 90px;
+}
+
+.link__row {
+    flex-direction: column;
+    margin: 16px 0;
+}
+
+.link--click {
+    margin: 16px 0;
+}
+
+.footer__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

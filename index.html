@@ -14,14 +14,14 @@
         <nav>
             <div class="row">
                 <div class="nav__container">
-                    <img class="logo" src="assets/P.png">
+                    <h2 class="logo">Logo</h2>
                     <ul class="nav__links">
                         <li><a href="#" class="nav__link"></a>About</li>
                         <li><a href="#" class="nav__link"></a>Blog</li>
                         <li><a href="#" class="nav__link"></a>Pricing</li>
                         <li><a href="#" class="nav__link"></a>Contact Us</li>
                         <li><a href="#" class="nav__link nav__link--primary"></a>Login</li>
-                        <li><a href="#" class="nav__link nav__link--primary">Sign up</a></li>
+                        <li><a href="#" class="nav__link nav__link--primary signup">Register</a></li>
                     </ul>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                     <h2 class="landing__title">Beautiful React Templates for you.</h2>
                     <p class="landing__para">Our templates are easy to setup, understand and customize. Fully modulaar components with a variety of pages and components.</p>
                     <div class="landing__info">
-                        <input type="text" placeholder="Your E-mail Address">
+                        <input class="email" type="text" placeholder="Your E-mail Address">
                         <button class="getstarted">Get Started</button>
                     </div>
                     <h6 class="landing__trust">OUR TRUSTED CUSTOMERS</h6>
@@ -119,6 +119,7 @@
             <h3 class="qualitywork__title">QUALITY WORK</h3>
             <h1 class="qualitywork__header">Designed & Developed by Professionals.</h1>
             <p class="qualitywork__para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam facilis hic illo et nostrum sint quae quod voluptatum ipsum beatae, tempore quia. Commodi, iure?</p>
+            <button class="learnmore">Learn More</button>
         </div>
         <div class="img__wrapper">
             <img src="assets/thoughts.svg">
@@ -168,21 +169,23 @@
                     <h3 class="values__title">VALUES</h3>
                     <h1 class="values__header">We Always Abide by Our Principles</h1>
                     <p class="values__para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit nesciunt assumenda quisquam eveniet iste corporis quis adipisci, esse veritatis, blanditiis et aut, rerum saepe? Consequuntur sint maiores cum reprehenderit hic quae vitae.</p>
-                    <div class="value__containers">
-                        <div class="value__container--row">
-                            <i></i>
-                            <h3 class="value__side">Affordable</h3>
-                            <p>We promise to offer you the best rate we can - at par with the industry standard.</p>
+                    <div class="v--container">
+                        <div class="value__containers">
+                            <div class="value__container--row">
+                                <i></i>
+                                <h3 class="value__side">Affordable</h3>
+                                <p>We promise to offer you the best rate we can - at par with the industry standard.</p>
+                            </div>
+                        </div>
+                        <div class="value__containers">
+                            <div class="value__container--row">
+                                <i></i>
+                                <h3>Professionalism</h3>
+                                <p>We assure you that our templates are desgined and created by professional desginers</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="value__containers">
-                        <div class="value__container--row">
-                            <i></i>
-                            <h3>Professionalism</h3>
-                            <p>We assure you that our templates are desgined and created by professional desginers</p>
-                        </div>
-                    </div>
-                    <button>Learn More</button>
+                    <button class="learnmore">Learn More</button>
                 </div>
                 <div class="img__wrapper">
                     <img src="assets/goals.svg">
@@ -200,72 +203,78 @@
                 </div>
                 <div class="plans">
                     <div class="plan">
+                        <div class="plan__personal">
+                        </div>
                         <div class="plan__top">
                             <h4 class="plan__title">PERSONAL</h4>
                             <span class="plan__price">$17.99</span>
                             <h6 class="plan__monthly">MONTHLY</h6>
                         </div>
                         <div class="plan__middle">
-                            <div class="plan__type">
-                                <h4>For Individuals</h4>
-                            </div>
-                            <div class="plan__dets">
-                                <ul class="plan__details">
-                                    <li class="plan__detail">30 Templates</li>
-                                    <li class="plan__detail">7 Landing Pages</li>
-                                    <li class="plan__detail">12 Internal Pages</li>
-                                    <li class="plan__detail">Basic Assistance</li>
-                                </ul>
+                            <div class="plans__type">
+                                <h4 class="plan__type">For Individuals</h4>
+                                <div class="plan__dets">
+                                    <ul class="plan__details">
+                                        <li class="plan__detail">30 Templates</li>
+                                        <li class="plan__detail">7 Landing Pages</li>
+                                        <li class="plan__detail">12 Internal Pages</li>
+                                        <li class="plan__detail">Basic Assistance</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="plan__bottom">
-                            <button>BUY NOW</button>
+                            <button class="buyleft">BUY NOW</button>
                         </div>
                     </div>
-                    <div class="plan">
+                    <div class="plan middle__plan">
+                        <div class="plan__personal">
+                        </div>
                         <div class="plan__top">
                             <h4 class="plan__title">BUSINESS</h4>
                             <span class="plan__price">$37.99</span>
                             <h6 class="plan__monthly">MONTHLY</h6>
                         </div>
                         <div class="plan__middle">
-                            <div class="plan__type">
-                                <h4>For Small Businesses</h4>
-                            </div>
-                            <div class="plan__dets">
-                                <ul class="plan__details">
-                                    <li class="plan__detail">60 Templates</li>
-                                    <li class="plan__detail">15 Landing Pages</li>
-                                    <li class="plan__detail">22 Internal Pages</li>
-                                    <li class="plan__detail">Priority Assistance</li>
-                                </ul>
+                            <div class="plans__type">
+                                <h4 class="plan__type">For Small Businesses</h4>
+                                <div class="plan__dets">
+                                    <ul class="plan__details">
+                                        <li class="plan__detail">60 Templates</li>
+                                        <li class="plan__detail">15 Landing Pages</li>
+                                        <li class="plan__detail">22 Internal Pages</li>
+                                        <li class="plan__detail">Priority Assistance</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="plan__bottom">
-                            <button>BUY NOW</button>
+                            <button class="buymid">BUY NOW</button>
                         </div>
                     </div>
                     <div class="plan">
+                        <div class="plan__personal">
+                        </div>
                         <div class="plan__top">
                             <h4 class="plan__title">ENTERPRISE</h4>
                             <span class="plan__price">$57.99</span>
                             <h6 class="plan__monthly">MONTHLY</h6>
                         </div>
                         <div class="plan__middle">
-                            <div class="plan__type">
-                                <h4>For Large Companies</h4>
-                            </div>
-                            <div class="plan__dets">
-                                <ul class="plan__details">
-                                    <li class="plan__detail">90 Templates</li>
-                                    <li class="plan__detail">27 Landing Pages</li>
-                                    <li class="plan__detail">37 Internal Pages</li>
-                                    <li class="plan__detail">Personal Assistance</li>
-                                </ul>
+                            <div class="plans__type">
+                                <h4 class="plan__type">For Large Companies</h4>
+                                <div class="plan__dets">
+                                    <ul class="plan__details">
+                                        <li class="plan__detail">90 Templates</li>
+                                        <li class="plan__detail">27 Landing Pages</li>
+                                        <li class="plan__detail">37 Internal Pages</li>
+                                        <li class="plan__detail">Personal Assistance</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="plan__bottom">
-                            <button>BUY NOW</button>
+                            <button class="buyright">BUY NOW</button>
                         </div>
                     </div>
                 </div>
@@ -333,8 +342,10 @@
             </div>
             <div class="contact__container">
                 <h3 class="contact__title">Developers all over the world are happily using Treact</h3>
-                <button class="Start">Get Started</button>
-                <button class="Contact">Contact Us</button>
+                <div class="contact__buttons">
+                    <button class="Start">Get Started</button>
+                    <button class="Contact">Contact Us</button>
+                </div>
             </div>
         </div>
     </section>
@@ -391,13 +402,12 @@
     </div>
     <div class="footer__info">
         <img class="logo" src="assets/P.png" alt="">
-        <div class="footer__copyright">&copy; 2023 Practice Inc. All rights Reserved.
+        <div class="footer__copyright">&copy; 2023 Practice Inc. All rights Reserved.</div>
             <div class="social__media--links">
                 <i class="fa-brands fa-facebook-f"></i>
                 <i class="fa-brands fa-twitter"></i>
                 <i class="fa-brands fa-youtube"></i>
             </div>
-        </div>
     </div>
 </div>
 </footer>
