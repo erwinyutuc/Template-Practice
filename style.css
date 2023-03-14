@@ -18,11 +18,11 @@ html {
   }
 
 .root {
-    padding: 0 40px;
+    padding: 0 1.5rem;
 }
 
 .signup {
-    background-color: #7342d6;
+    background-color: navy;
     color: white;
     padding: 12px 24px;
     border-radius: 2rem;
@@ -30,13 +30,18 @@ html {
 }
 
 .learnmore {
-    background-color: #7342d6;
+    background-color: navy;
     color: white;
     font-size: 1rem;
     padding: 1rem;
     border-radius: 2rem;
     border: none;
     max-width: 165px;
+}
+
+a:link {
+    text-decoration: none;
+    color: white
 }
 
 p {
@@ -69,7 +74,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 
 }
 
 img {
@@ -108,7 +112,7 @@ li {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: calc(84vh - 100px);
+    height: auto;
 }
 
 .landing__description {
@@ -128,10 +132,23 @@ li {
     padding-bottom: 40px;
 }
 
+
 .email {
-    border-radius: 8px;
+    border-radius: 2rem;
     border-color: solid #555; 
-    padding: 1rem 5rem
+    padding: 1.5rem 8rem 1.5rem 1rem;
+}
+
+/*height calc(84vh - 100px)*/ 
+
+.getstarted {
+    background-color: navy;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: none;
+    max-width: 165px;
 }
 
 .landing__trust {
@@ -149,8 +166,9 @@ li {
 /* FEATURES */
 
 .feature__container {
-    padding: 80px 0;
-    height: calc(84vh - 100px);
+    height: auto;
+    display: flex;
+    align-content: center;
 }
 
 .features {
@@ -178,6 +196,7 @@ li {
 .services {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 3rem;
 }
 
 .service {
@@ -208,7 +227,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(84vh - 100px);
+    height: auto;
 
 }
 
@@ -220,7 +239,7 @@ li {
 
 .step__container {
     display: flex;
-    height: calc(84vh - 100px);
+    height: auto;
 }
 
 .step__title {
@@ -246,7 +265,7 @@ li {
 /* VALUE */
 
 #values {
-    height: calc(84vh - 100px);
+    height: auto;
 }
 
 .v--container {
@@ -273,7 +292,7 @@ li {
 /* PRICING */ 
 
 .price__container {
-    height: calc(100vh - 90px);
+    height: auto;
 }
 
 .pricing {
@@ -343,9 +362,6 @@ li {
     padding: 2rem 0 1rem 0;                             
 }
 
-.plans__type {
-}
-
 .plan__bottom {
     border-top: solid grey 1px;
     padding: 1rem 5rem;
@@ -385,7 +401,7 @@ li {
 /* TEST TIMONIALS */
 
 #testimonials {
-    height: calc(84vh - 100px);
+    height: auto;
 }
 
 .test__container {
@@ -420,7 +436,7 @@ li {
 /* FAQS  */ 
 
 #faqs {
-    height: calc(140vh - 100px);
+    height: auto;
 }
 
 .faq__title {
@@ -515,7 +531,7 @@ li {
 
 .contact__container {
     display: flex;
-    margin: 56px 0;
+    margin: 1rem 0;
     padding: 100px;
     background: linear-gradient(to bottom right, navy, blue);
     border-radius: 8px;
@@ -538,7 +554,7 @@ li {
 }
 
 .Start {
-    background-color: #7342d6;
+    background-color: #3333ff;
     color: white;
     font-size: 1rem;
     padding: 1rem;
@@ -549,7 +565,7 @@ li {
 }
 
 .Contact {
-    background-color: #7342d6;
+    background-color: #3333ff;
     color: white;
     font-size: 1rem;
     padding: 1rem;
@@ -562,27 +578,33 @@ li {
 
 footer {
     background: navy;
-    margin-top: 5rem;
 }
 
 .links {
     display: flex;
     justify-content: space-evenly;
     color: white;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .link {
-    padding: 6rem 0;
+    padding: 5rem;
 }
 
 .link__row {
     flex-direction: column;
-    margin: 8px 0;
+    padding-top: 3rem;
+
+}
+
+.footer__link {
+    color: white;
 }
 
 .link--click {
     margin: 8px 0;
-    color: white;
 }
 
 .footer__info {
@@ -590,5 +612,114 @@ footer {
     justify-content: space-between;
     align-items: center;
     border-top: solid grey 1px;
-    padding: 4rem;
+    padding: 5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo,
+.footer__copyright,
+.social__media--links {
+    color: white;
+}
+
+.fa-brands {
+    padding: 0 1rem; 
+}
+
+
+@media (max-width: 992px) {
+    .getstarted {
+        margin-top: 1rem;
+        padding: 1rem 9.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3rem;
+    }
+    .plan__top, .plan__bottom {
+        padding: .5rem 1rem;
+    } 
+    .testimonal , .test__container {
+        margin-left: 2rem;
+    }
+    .link {
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section__landing {
+        flex-direction: column;
+    }
+    .landing__description,
+    .landing__img {
+        width: 100%;
+    }
+    .landing__info {
+        display: grid;
+        place-content: center;
+    } 
+    
+    .feature__para {
+        width: 75%;
+    }
+    .services {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .service__para {
+        font-size: 2rem;
+        width: 100%;
+    }
+    .service__description {
+        width: 100%;
+    }
+    .qw__container {
+        flex-direction: column;
+    }
+    .qualitywork__para {
+        text-align: center;
+    }
+    .container,
+    .img__wrapper {
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+    .step__container {
+        flex-direction: column;
+    }
+    .value__container {
+        flex-direction: column;
+    }
+    .pricing__para {
+        width: 75%;
+    }
+    .plans {
+        flex-direction: column;
+        display: grid;
+        place-items: center;
+        margin: 0 10rem;
+    }
+    .plan {
+        margin-bottom: 3rem;
+    }
+    .test__container {
+        flex-direction: column;
+    }
+    .testimonal {
+        display: grid;
+        place-items: center;
+        width: 80%;
+    }
+    .testimonal__description {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+
 }
