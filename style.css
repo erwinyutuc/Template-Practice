@@ -24,7 +24,7 @@ html {
 .signup {
     background-color: navy;
     color: white;
-    padding: 12px 24px;
+    padding: 12px 2rem;
     border-radius: 2rem;
     font-size: 16px;
 }
@@ -110,13 +110,13 @@ li {
 
 .section__landing {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    height: auto;
+    height: calc(80vh - 100px);
 }
 
 .landing__description {
-    width: 45%;
+    width: 50%;
 }
 
 .landing__title {
@@ -136,7 +136,7 @@ li {
 .email {
     border-radius: 2rem;
     border-color: solid #555; 
-    padding: 1.5rem 8rem 1.5rem 1rem;
+    padding: 1.5rem 4rem 1.5rem 1rem;
 }
 
 /*height calc(84vh - 100px)*/ 
@@ -145,7 +145,7 @@ li {
     background-color: navy;
     color: white;
     font-size: 1rem;
-    padding: 1rem;
+    padding: 1.5rem 2rem;
     border-radius: 2rem;
     border: none;
     max-width: 165px;
@@ -166,7 +166,7 @@ li {
 /* FEATURES */
 
 .feature__container {
-    height: auto;
+    height: calc(60vh - 100px);
     display: flex;
     align-content: center;
 }
@@ -227,8 +227,11 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: calc(100vh - 100px);
+}
 
+.qualitywork__title {
+    padding-bottom: 2rem;
 }
 
 .qualitywork__header {
@@ -239,7 +242,7 @@ li {
 
 .step__container {
     display: flex;
-    height: auto;
+    height: calc(80vh - 100px);
 }
 
 .step__title {
@@ -265,7 +268,6 @@ li {
 /* VALUE */
 
 #values {
-    height: auto;
 }
 
 .v--container {
@@ -275,6 +277,7 @@ li {
 
 .value__container {
     display: flex;
+    height: calc(100vh - 100px);
 }
 
 .values__title {
@@ -292,7 +295,7 @@ li {
 /* PRICING */ 
 
 .price__container {
-    height: auto;
+    height: calc(100vh - 100px); 
 }
 
 .pricing {
@@ -400,13 +403,14 @@ li {
 
 /* TEST TIMONIALS */
 
-#testimonials {
-    height: auto;
+#testimonial {
+    height: calc(100vh - 100px);
 }
 
 .test__container {
     display: flex;
     justify-content: space-evenly;
+    margin: 15rem 0;
 }
 
 .img__wrapper {
@@ -436,7 +440,7 @@ li {
 /* FAQS  */ 
 
 #faqs {
-    height: auto;
+    height: calc(150vh - 100px);
 }
 
 .faq__title {
@@ -447,14 +451,13 @@ li {
 .faq__subtitle {
     display: flex;
     justify-content: center;
-    padding: 1.5rem;
+    padding: 1rem 0 0 0;
 }
 
 .faq__description {
     display: flex;
     justify-content: center;
-    padding-bottom: 1rem;
-
+    padding: .5rem 0;
 }
 
 .faq__questions {
@@ -531,7 +534,7 @@ li {
 
 .contact__container {
     display: flex;
-    margin: 1rem 0;
+    margin: 7rem 0;
     padding: 100px;
     background: linear-gradient(to bottom right, navy, blue);
     border-radius: 8px;
@@ -630,6 +633,9 @@ footer {
 
 
 @media (max-width: 992px) {
+    .email {
+        padding: 1.5rem 4.5rem;
+    }
     .getstarted {
         margin-top: 1rem;
         padding: 1rem 9.5rem;
@@ -647,11 +653,15 @@ footer {
     .link {
         padding: 2.5rem;
     }
+    .faq__description {
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {
     .section__landing {
         flex-direction: column;
+        height: 120vh;
     }
     .landing__description,
     .landing__img {
@@ -660,16 +670,25 @@ footer {
     .landing__info {
         display: grid;
         place-content: center;
+    }
+    .landing__title,
+    .landing__para,
+    .landing__trust {
+        text-align: center;
     } 
-    
+    .feature__container {
+        height: 160vh;
+    }
     .feature__para {
         width: 75%;
     }
     .services {
         flex-direction: column;
-        display: flex;
-        justify-content: center;
-        align-content: center;
+        display: grid;
+        place-items: center;
+    }
+    .service {
+        width: 100%;
     }
     .service__para {
         font-size: 2rem;
@@ -680,20 +699,48 @@ footer {
     }
     .qw__container {
         flex-direction: column;
+        height: 130vh;
     }
+    .qualitywork__title,
+    .qualitywork__header,
     .qualitywork__para {
         text-align: center;
     }
+    .qualitywork__para {
+        padding: 1rem;
+    }
+    
     .container,
     .img__wrapper {
         width: 100%;
-        padding-bottom: 2rem;
+        padding: 2rem 0;
+        align-items: center;
     }
     .step__container {
         flex-direction: column;
+        height: 120vh
     }
     .value__container {
         flex-direction: column;
+        height: 130vh;
+    }
+    .values__header,
+    .values__para {
+        text-align: center;
+    }
+    .values__para {
+        padding: 2rem 0;
+    }
+    .learnmore {
+        padding: 1rem 14rem;
+        display: grid;
+        place-content: center;
+    }
+    .price__container {
+        height: 200vh;
+    }
+    .price__header {
+        text-align: center;
     }
     .pricing__para {
         width: 75%;
@@ -702,7 +749,7 @@ footer {
         flex-direction: column;
         display: grid;
         place-items: center;
-        margin: 0 10rem;
+        margin: 0 5rem;
     }
     .plan {
         margin-bottom: 3rem;
@@ -718,8 +765,57 @@ footer {
     .testimonal__description {
         text-align: center;
     }
+    .contact__container {
+        margin: 2.5rem 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact__title {
+        width: 50%;
+        text-align: center;
+        padding-bottom: 3rem;
+    }
+    .contact__buttons {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .Start,
+    .Contact {
+        padding: 1rem 4rem;
+    }
+    .footer__info  {
+        padding: 4rem 2rem
+    }
 }
 
 @media (max-width: 576px) {
-
+    .section__landing {
+        height: 100vh;
+    }
+    .feature__container {
+        height: 250vh;
+    }
+    .plans {
+        margin: 0 1rem;
+    }
+    .contact__container {
+        padding: 4rem 1rem
+    }
+    .link {
+        padding: 2rem .2rem;
+    }
+    .footer__info {
+        padding: 4rem 2rem;
+    }
+    .footer__copyright {
+        text-align: center;
+    }
+    .social__media--links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
+
