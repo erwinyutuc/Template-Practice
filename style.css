@@ -102,26 +102,22 @@ li {
 
 /* LANDING */ 
 
-#landing {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .section__landing {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(80vh - 100px);
+    height: 72vh;
 }
 
 .landing__description {
+    margin-right: .5rem;
     width: 50%;
 }
 
 .landing__title {
-    font-size: 40px;
-    padding-bottom: 32px;
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    width: 75%;
 }
 
 .landing__para {
@@ -131,12 +127,11 @@ li {
 .landing__info {
     padding-bottom: 40px;
 }
-
-
 .email {
-    border-radius: 2rem;
-    border-color: solid #555; 
-    padding: 1.5rem 4rem 1.5rem 1rem;
+    border-radius: 6rem;
+    border-color: navy; 
+    padding: 1.5rem 2.5rem;
+    color: navy;
 }
 
 /*height calc(84vh - 100px)*/ 
@@ -145,10 +140,9 @@ li {
     background-color: navy;
     color: white;
     font-size: 1rem;
-    padding: 1.5rem 2rem;
-    border-radius: 2rem;
+    padding: 1.5rem 5rem;
+    border-radius: 6rem;
     border: none;
-    max-width: 165px;
 }
 
 .landing__trust {
@@ -156,21 +150,9 @@ li {
 }
 
 .landing__img {
-    width: 55%;
+    width: 45%;
 }
-
-.firstimg {
-    height: 400px;
-}
-
 /* FEATURES */
-
-.feature__container {
-    height: calc(60vh - 100px);
-    display: flex;
-    align-content: center;
-}
-
 .features {
     padding-bottom: 1rem;
 }
@@ -227,7 +209,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 100px);
+    height: 100vh;
 }
 
 .qualitywork__title {
@@ -242,7 +224,7 @@ li {
 
 .step__container {
     display: flex;
-    height: calc(80vh - 100px);
+    height: 100vh;
 }
 
 .step__title {
@@ -266,10 +248,6 @@ li {
 }
 
 /* VALUE */
-
-#values {
-}
-
 .v--container {
     display: flex;
     padding: 1rem 0 2rem 0;
@@ -277,7 +255,7 @@ li {
 
 .value__container {
     display: flex;
-    height: calc(100vh - 100px);
+    height: 100vh;
 }
 
 .values__title {
@@ -295,7 +273,7 @@ li {
 /* PRICING */ 
 
 .price__container {
-    height: calc(100vh - 100px); 
+    height: 100vh; 
 }
 
 .pricing {
@@ -404,7 +382,7 @@ li {
 /* TEST TIMONIALS */
 
 #testimonial {
-    height: calc(100vh - 100px);
+    height: 100vh;
 }
 
 .test__container {
@@ -440,7 +418,7 @@ li {
 /* FAQS  */ 
 
 #faqs {
-    height: calc(150vh - 100px);
+    height: calc(140vh - 100px);
 }
 
 .faq__title {
@@ -469,10 +447,10 @@ li {
 
 .accordion-item {
     background-color: lightgrey;
-    border-radius: .4rem;
+    border-radius: 1rem;
     margin-bottom: 1rem;
-    padding: 1rem;
-    box-shadow: .5rem 2px .5rem rgba(0, 0, 0, 1)
+    padding: .5rem;
+    box-shadow: .5rem .3rem rgba(0, 0, 0, 1)
 }
 
 .accordion-link {
@@ -534,7 +512,7 @@ li {
 
 .contact__container {
     display: flex;
-    margin: 7rem 0;
+    margin: 7.5rem 0;
     padding: 100px;
     background: linear-gradient(to bottom right, navy, blue);
     border-radius: 8px;
@@ -634,15 +612,19 @@ footer {
 
 @media (max-width: 992px) {
     .email {
-        padding: 1.5rem 4.5rem;
+        padding: 2rem 7.5rem;
     }
     .getstarted {
         margin-top: 1rem;
-        padding: 1rem 9.5rem;
+        padding: 2rem 10rem;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 3rem;
+    }
+    .feature__para {
+        text-align: center;
+        width: 100%;
     }
     .plan__top, .plan__bottom {
         padding: .5rem 1rem;
@@ -677,25 +659,29 @@ footer {
         text-align: center;
     } 
     .feature__container {
-        height: 160vh;
+        height: 120vh;
     }
     .feature__para {
         width: 75%;
     }
-    .services {
+    .services,
+    .service,
+    .service__description {
         flex-direction: column;
         display: grid;
         place-items: center;
     }
-    .service {
-        width: 100%;
-    }
     .service__para {
-        font-size: 2rem;
+        font-size: 1rem;
+        text-align: center;
         width: 100%;
     }
+    .service,
     .service__description {
         width: 100%;
+    }
+    .service__subtitle {
+        padding-top: 1rem;
     }
     .qw__container {
         flex-direction: column;
@@ -718,11 +704,28 @@ footer {
     }
     .step__container {
         flex-direction: column;
-        height: 120vh
+        height: 130vh
+    }
+    .step, 
+    .step__subtitle {
+        display: grid;
+        place-content: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .step__number {
+        margin: 0;
+        padding: 1rem 0;
+    }
+    .step__header {
+        padding: .4rem;
     }
     .value__container {
         flex-direction: column;
         height: 130vh;
+    }
+    .value__containers {
+        padding-right: 1rem;
     }
     .values__header,
     .values__para {
@@ -732,12 +735,12 @@ footer {
         padding: 2rem 0;
     }
     .learnmore {
-        padding: 1rem 14rem;
+        padding: 1rem 10rem;
         display: grid;
         place-content: center;
     }
     .price__container {
-        height: 200vh;
+        height: 190vh;
     }
     .price__header {
         text-align: center;
@@ -766,10 +769,11 @@ footer {
         text-align: center;
     }
     .contact__container {
-        margin: 2.5rem 0;
+        margin: 7.5rem 0;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 2rem;
     }
     .contact__title {
         width: 50%;
@@ -791,17 +795,51 @@ footer {
 }
 
 @media (max-width: 576px) {
+    .nav__links {
+        font-size: 12px;
+    }
+    .signup {
+        font-size: 10px;
+        padding: 1rem 
+    }
     .section__landing {
-        height: 100vh;
+        height: 90vh;
+    }
+    .landing__description {
+        display: grid;
+        place-items: center;
+        margin: 0;
+    }
+    .getstarted {
+        padding: 2rem
     }
     .feature__container {
-        height: 250vh;
+        margin-top: 8rem;
+        height: 140vh;
+    }
+    .step, 
+    .step__subtitle {
+        display: grid;
+        place-content: center;
+        text-align: center;
+        margin: 0;
+    }
+    .step__number {
+        margin: auto;
     }
     .plans {
         margin: 0 1rem;
     }
+    .test__container {
+        margin-top: 20rem;
+        height: 80vh;
+    }
     .contact__container {
-        padding: 4rem 1rem
+        padding: 2rem;
+        margin: 4.5rem 0;
+    }
+    .contact__title {
+        text-align: center;
     }
     .link {
         padding: 2rem .2rem;
