@@ -24,7 +24,7 @@ html {
 .signup {
     background-color: navy;
     color: white;
-    padding: 12px 24px;
+    padding: 12px 2rem;
     border-radius: 2rem;
     font-size: 16px;
 }
@@ -102,26 +102,22 @@ li {
 
 /* LANDING */ 
 
-#landing {
+.section__landing {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.section__landing {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: auto;
+    height: 72vh;
 }
 
 .landing__description {
-    width: 45%;
+    margin-right: .5rem;
+    width: 50%;
 }
 
 .landing__title {
-    font-size: 40px;
-    padding-bottom: 32px;
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    width: 75%;
 }
 
 .landing__para {
@@ -131,12 +127,11 @@ li {
 .landing__info {
     padding-bottom: 40px;
 }
-
-
 .email {
-    border-radius: 2rem;
-    border-color: solid #555; 
-    padding: 1.5rem 8rem 1.5rem 1rem;
+    border-radius: 6rem;
+    border-color: navy; 
+    padding: 1.5rem 2.5rem;
+    color: navy;
 }
 
 /*height calc(84vh - 100px)*/ 
@@ -145,10 +140,9 @@ li {
     background-color: navy;
     color: white;
     font-size: 1rem;
-    padding: 1rem;
-    border-radius: 2rem;
+    padding: 1.5rem 5rem;
+    border-radius: 6rem;
     border: none;
-    max-width: 165px;
 }
 
 .landing__trust {
@@ -156,21 +150,9 @@ li {
 }
 
 .landing__img {
-    width: 55%;
+    width: 45%;
 }
-
-.firstimg {
-    height: 400px;
-}
-
 /* FEATURES */
-
-.feature__container {
-    height: auto;
-    display: flex;
-    align-content: center;
-}
-
 .features {
     padding-bottom: 1rem;
 }
@@ -227,8 +209,11 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: 100vh;
+}
 
+.qualitywork__title {
+    padding-bottom: 2rem;
 }
 
 .qualitywork__header {
@@ -239,7 +224,7 @@ li {
 
 .step__container {
     display: flex;
-    height: auto;
+    height: 100vh;
 }
 
 .step__title {
@@ -263,11 +248,6 @@ li {
 }
 
 /* VALUE */
-
-#values {
-    height: auto;
-}
-
 .v--container {
     display: flex;
     padding: 1rem 0 2rem 0;
@@ -275,6 +255,7 @@ li {
 
 .value__container {
     display: flex;
+    height: 100vh;
 }
 
 .values__title {
@@ -292,7 +273,7 @@ li {
 /* PRICING */ 
 
 .price__container {
-    height: auto;
+    height: 100vh; 
 }
 
 .pricing {
@@ -400,13 +381,14 @@ li {
 
 /* TEST TIMONIALS */
 
-#testimonials {
-    height: auto;
+#testimonial {
+    height: 100vh;
 }
 
 .test__container {
     display: flex;
     justify-content: space-evenly;
+    margin: 15rem 0;
 }
 
 .img__wrapper {
@@ -436,7 +418,7 @@ li {
 /* FAQS  */ 
 
 #faqs {
-    height: auto;
+    height: calc(140vh - 100px);
 }
 
 .faq__title {
@@ -447,14 +429,13 @@ li {
 .faq__subtitle {
     display: flex;
     justify-content: center;
-    padding: 1.5rem;
+    padding: 1rem 0 0 0;
 }
 
 .faq__description {
     display: flex;
     justify-content: center;
-    padding-bottom: 1rem;
-
+    padding: .5rem 0;
 }
 
 .faq__questions {
@@ -466,10 +447,10 @@ li {
 
 .accordion-item {
     background-color: lightgrey;
-    border-radius: .4rem;
+    border-radius: 1rem;
     margin-bottom: 1rem;
-    padding: 1rem;
-    box-shadow: .5rem 2px .5rem rgba(0, 0, 0, 1)
+    padding: .5rem;
+    box-shadow: .5rem .3rem rgba(0, 0, 0, 1)
 }
 
 .accordion-link {
@@ -531,7 +512,7 @@ li {
 
 .contact__container {
     display: flex;
-    margin: 1rem 0;
+    margin: 7.5rem 0;
     padding: 100px;
     background: linear-gradient(to bottom right, navy, blue);
     border-radius: 8px;
@@ -630,13 +611,20 @@ footer {
 
 
 @media (max-width: 992px) {
+    .email {
+        padding: 2rem 7.5rem;
+    }
     .getstarted {
         margin-top: 1rem;
-        padding: 1rem 9.5rem;
+        padding: 2rem 10rem;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 3rem;
+    }
+    .feature__para {
+        text-align: center;
+        width: 100%;
     }
     .plan__top, .plan__bottom {
         padding: .5rem 1rem;
@@ -647,11 +635,15 @@ footer {
     .link {
         padding: 2.5rem;
     }
+    .faq__description {
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {
     .section__landing {
         flex-direction: column;
+        height: 120vh;
     }
     .landing__description,
     .landing__img {
@@ -660,40 +652,98 @@ footer {
     .landing__info {
         display: grid;
         place-content: center;
+    }
+    .landing__title,
+    .landing__para,
+    .landing__trust {
+        text-align: center;
     } 
-    
+    .feature__container {
+        height: 120vh;
+    }
     .feature__para {
         width: 75%;
     }
-    .services {
+    .services,
+    .service,
+    .service__description {
         flex-direction: column;
-        display: flex;
-        justify-content: center;
-        align-content: center;
+        display: grid;
+        place-items: center;
     }
     .service__para {
-        font-size: 2rem;
+        font-size: 1rem;
+        text-align: center;
         width: 100%;
     }
+    .service,
     .service__description {
         width: 100%;
     }
+    .service__subtitle {
+        padding-top: 1rem;
+    }
     .qw__container {
         flex-direction: column;
+        height: 130vh;
     }
+    .qualitywork__title,
+    .qualitywork__header,
     .qualitywork__para {
         text-align: center;
     }
+    .qualitywork__para {
+        padding: 1rem;
+    }
+    
     .container,
     .img__wrapper {
         width: 100%;
-        padding-bottom: 2rem;
+        padding: 2rem 0;
+        align-items: center;
     }
     .step__container {
         flex-direction: column;
+        height: 130vh
+    }
+    .step, 
+    .step__subtitle {
+        display: grid;
+        place-content: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .step__number {
+        margin: 0;
+        padding: 1rem 0;
+    }
+    .step__header {
+        padding: .4rem;
     }
     .value__container {
         flex-direction: column;
+        height: 130vh;
+    }
+    .value__containers {
+        padding-right: 1rem;
+    }
+    .values__header,
+    .values__para {
+        text-align: center;
+    }
+    .values__para {
+        padding: 2rem 0;
+    }
+    .learnmore {
+        padding: 1rem 10rem;
+        display: grid;
+        place-content: center;
+    }
+    .price__container {
+        height: 190vh;
+    }
+    .price__header {
+        text-align: center;
     }
     .pricing__para {
         width: 75%;
@@ -702,7 +752,7 @@ footer {
         flex-direction: column;
         display: grid;
         place-items: center;
-        margin: 0 10rem;
+        margin: 0 5rem;
     }
     .plan {
         margin-bottom: 3rem;
@@ -718,8 +768,92 @@ footer {
     .testimonal__description {
         text-align: center;
     }
+    .contact__container {
+        margin: 7.5rem 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+    .contact__title {
+        width: 50%;
+        text-align: center;
+        padding-bottom: 3rem;
+    }
+    .contact__buttons {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .Start,
+    .Contact {
+        padding: 1rem 4rem;
+    }
+    .footer__info  {
+        padding: 4rem 2rem
+    }
 }
 
 @media (max-width: 576px) {
-
+    .nav__links {
+        font-size: 12px;
+    }
+    .signup {
+        font-size: 10px;
+        padding: 1rem 
+    }
+    .section__landing {
+        height: 90vh;
+    }
+    .landing__description {
+        display: grid;
+        place-items: center;
+        margin: 0;
+    }
+    .getstarted {
+        padding: 2rem
+    }
+    .feature__container {
+        margin-top: 8rem;
+        height: 140vh;
+    }
+    .step, 
+    .step__subtitle {
+        display: grid;
+        place-content: center;
+        text-align: center;
+        margin: 0;
+    }
+    .step__number {
+        margin: auto;
+    }
+    .plans {
+        margin: 0 1rem;
+    }
+    .test__container {
+        margin-top: 20rem;
+        height: 80vh;
+    }
+    .contact__container {
+        padding: 2rem;
+        margin: 4.5rem 0;
+    }
+    .contact__title {
+        text-align: center;
+    }
+    .link {
+        padding: 2rem .2rem;
+    }
+    .footer__info {
+        padding: 4rem 2rem;
+    }
+    .footer__copyright {
+        text-align: center;
+    }
+    .social__media--links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
+
