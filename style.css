@@ -58,7 +58,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2.5rem 0;
+    margin-top: 2.5rem;
 
 }
 
@@ -80,10 +80,6 @@ img {
     width: 500px;
 }
 
-#navi {
-
-}
-
 ul {
     display: flex;
 }
@@ -92,21 +88,20 @@ li {
     list-style-type: none;
   }
 
-.logo {
-    width: 116px;
+.nav__link {
+    margin: 0 1rem;
 }
 
-.nav__link {
-    margin: 0 16px;
+.navy {
+    color: #1a45c7;
 }
 
 /* LANDING */ 
 
 .section__landing {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 72vh;
+    height: 60vh;
 }
 
 .landing__description {
@@ -153,6 +148,9 @@ li {
     width: 45%;
 }
 /* FEATURES */
+.feature__container {
+    height: 50vh;
+}
 .features {
     padding-bottom: 1rem;
 }
@@ -193,7 +191,7 @@ li {
 }
 
 .service__img {
-    border: 2px solid #555;
+    border: 2px solid #1a45c7;
     height: 24px;
     width: 32px;
     display: flex;
@@ -209,7 +207,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 60vh;
 }
 
 .qualitywork__title {
@@ -217,14 +215,14 @@ li {
 }
 
 .qualitywork__header {
-    font-size: 60px;
+    font-size: 50px;
 }
 
 /* STEPS */
 
 .step__container {
     display: flex;
-    height: 100vh;
+    height: 60vh;
 }
 
 .step__title {
@@ -255,11 +253,13 @@ li {
 
 .value__container {
     display: flex;
-    height: 100vh;
+    height: 70vh;
 }
 
 .values__title {
     margin-bottom: 24px;
+    display: grid;
+    place-content: center;
 }
 
 .values__header {
@@ -267,13 +267,29 @@ li {
 }
 
 .val__can {
-    width: 50%;
+}
+
+.value__container--row {
+    padding-right: 1rem;
+    display: flex;
+}
+
+.value__side {
+    padding-left: 1rem;
+}
+
+.icon {
+    border: 2px solid navy;
+    padding: .5rem;
+    border-radius: 2rem;
+    background-color: navy;
+    color: white;
 }
 
 /* PRICING */ 
 
 .price__container {
-    height: 100vh; 
+    height: 80vh; 
 }
 
 .pricing {
@@ -345,7 +361,7 @@ li {
 
 .plan__bottom {
     border-top: solid grey 1px;
-    padding: 1rem 5rem;
+    padding: 2rem 5rem;
 }
 
 .plan__details {
@@ -381,14 +397,10 @@ li {
 
 /* TEST TIMONIALS */
 
-#testimonial {
-    height: 100vh;
-}
-
 .test__container {
     display: flex;
-    justify-content: space-evenly;
-    margin: 15rem 0;
+    align-items: center;
+    height: 70vh;
 }
 
 .img__wrapper {
@@ -418,7 +430,7 @@ li {
 /* FAQS  */ 
 
 #faqs {
-    height: calc(140vh - 100px);
+    height: 120vh;
 }
 
 .faq__title {
@@ -512,8 +524,8 @@ li {
 
 .contact__container {
     display: flex;
-    margin: 7.5rem 0;
-    padding: 100px;
+    margin: 4rem 0;
+    padding: 120px;
     background: linear-gradient(to bottom right, navy, blue);
     border-radius: 8px;
 }
@@ -611,12 +623,18 @@ footer {
 
 
 @media (max-width: 992px) {
+    html {
+        overflow-x: hidden;
+    }
+    .section__landing {
+        height: 70vh;
+    }
     .email {
-        padding: 2rem 7.5rem;
+        padding: 2rem 5rem;
     }
     .getstarted {
         margin-top: 1rem;
-        padding: 2rem 10rem;
+        padding: 2rem 7.7rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -643,7 +661,10 @@ footer {
 @media (max-width: 768px) {
     .section__landing {
         flex-direction: column;
-        height: 120vh;
+        height: 100vh;
+        display: grid;
+        place-content: center;
+        margin-bottom: 5rem;
     }
     .landing__description,
     .landing__img {
@@ -657,6 +678,7 @@ footer {
     .landing__para,
     .landing__trust {
         text-align: center;
+        margin: 0 auto;
     } 
     .feature__container {
         height: 120vh;
@@ -673,7 +695,7 @@ footer {
     }
     .service__para {
         font-size: 1rem;
-        text-align: center;
+        justify-content: center;
         width: 100%;
     }
     .service,
@@ -685,7 +707,9 @@ footer {
     }
     .qw__container {
         flex-direction: column;
-        height: 130vh;
+        height: 110vh;
+        display: grid;
+        place-content: center;
     }
     .qualitywork__title,
     .qualitywork__header,
@@ -704,7 +728,9 @@ footer {
     }
     .step__container {
         flex-direction: column;
-        height: 130vh
+        display: grid;
+        place-content: center;
+        height: 110vh
     }
     .step, 
     .step__subtitle {
@@ -722,10 +748,12 @@ footer {
     }
     .value__container {
         flex-direction: column;
+        display: grid;
+        place-content: center;
         height: 130vh;
     }
     .value__containers {
-        padding-right: 1rem;
+        padding: 0 1rem;
     }
     .values__header,
     .values__para {
@@ -738,9 +766,12 @@ footer {
         padding: 1rem 10rem;
         display: grid;
         place-content: center;
+        margin: 0 auto;
     }
     .price__container {
-        height: 190vh;
+        height: 200vh;
+        display: grid;
+        place-content: center;
     }
     .price__header {
         text-align: center;
@@ -757,8 +788,14 @@ footer {
     .plan {
         margin-bottom: 3rem;
     }
+    .plan__bottom {
+        padding: 1.5rem 0;
+    }
     .test__container {
-        flex-direction: column;
+        flex-direction: column; 
+        display: grid;
+        place-content: center;
+        height: 100vh;
     }
     .testimonal {
         display: grid;
@@ -769,11 +806,11 @@ footer {
         text-align: center;
     }
     .contact__container {
-        margin: 7.5rem 0;
+        margin: 1.6rem 0;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 2rem;
+        padding: 4rem;
     }
     .contact__title {
         width: 50%;
@@ -814,8 +851,14 @@ footer {
         padding: 2rem
     }
     .feature__container {
-        margin-top: 8rem;
-        height: 140vh;
+        height: 100vh;
+    }
+    .service__para {
+        text-align: center;
+    }
+    .qw__container {
+        margin-top: 26rem;
+        height: 100vh;
     }
     .step, 
     .step__subtitle {
@@ -831,12 +874,11 @@ footer {
         margin: 0 1rem;
     }
     .test__container {
-        margin-top: 20rem;
-        height: 80vh;
+        height: 120vh;
     }
     .contact__container {
         padding: 2rem;
-        margin: 4.5rem 0;
+        margin: 1.5rem 0;
     }
     .contact__title {
         text-align: center;
